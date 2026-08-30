@@ -3,8 +3,21 @@
  NIM : 2510514020
  Kelas : A
  Berkas : index.html
- WARNA_UTAMA = #514020 (enam digit terakhir NIM)
+ WARNA_UTAMA = #514020
  TEBAL_BORDER = ( 0 mod 3 ) + 1 = 1
  N_PRESTASI = (( 2 + 0 ) mod 4 ) + 3 = 5
  Tanggal ketik : 30/08/2026
 -->
+<frameset rows="100, *">
+    <!-- 1. Bagian Atas -->
+    <frame src="atas.html" name="atas">
+    
+    <!-- Bagian Bawah yang dibagi lagi menjadi 2 kolom -->
+    <frameset cols="180, *">
+        <!-- 2. Bagian Kiri -->
+        <frame src="menu.html" name="menu">
+        
+        <!-- 3. Bagian Kanan / Konten Utama -->
+        <frame src="profil.html" name="isi">
+    </frameset>
+</frameset>
