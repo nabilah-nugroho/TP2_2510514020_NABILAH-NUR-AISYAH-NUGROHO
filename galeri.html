@@ -2,9 +2,80 @@
  Nama : Nabilah Nur Aisyah Nugroho
  NIM : 2510514020
  Kelas : A
- Berkas : index.html
- WARNA_UTAMA = #514020 (enam digit terakhir NIM)
- TEBAL_BORDER = ( 0 mod 3 ) + 1 = 1
- N_PRESTASI = (( 2 + 0 ) mod 4 ) + 3 = 5
+ Berkas : galeri.html
+ WARNA_UTAMA = #514020
+ TEBAL_BORDER = 1
  Tanggal ketik : 30/08/2026
--->
+--> 
+
+<html>
+    <head>
+        <title>Galeri - Nabilah</title>
+    </head>
+    <body bgcolor="#FAF7F0">
+        <a name="atas"></a>
+        <font face="Montserrat, sans-serif">
+            <h1>Galeri Kegiatan Praktikum</h1>
+            <hr width="100%" size="2" color="#514020" noshade>
+            
+            <p>Arahkan penunjuk tetikus ke tiga bagian gambar di bawah ini. Setiap bagian memiliki bentuk area yang berbeda dan akan membawa Anda ke keterangannya.</p>
+            
+            <!-- Gambar utama dengan implementasi Peta Gambar (Image Map) -->
+            <center>
+                <img src="gambar/kegiatan.jpg" width="600" alt="Foto Kegiatan Praktikum" usemap="#peta_galeri" border="1">
+            </center>
+            
+            <map name="peta_galeri">
+                <!-- Area 1: Persegi (rect) -->
+                <area shape="rect" coords="60,60,340,120" href="#ket_rect" alt="Layar proyektor" title="Layar proyektor">
+                <!-- Area 2: Lingkaran (circle) -->
+                <area shape="circle" coords="480,180,55" href="#ket_circle" alt="Wajah praktikan" title="Wajah praktikan">
+                <!-- Area 3: Poligon (poly) dengan minimal 6 pasang koordinat -->
+                <area shape="poly" coords="120,300,300,280,420,300,400,400,140,410,100,360" href="#ket_poly" alt="Spanduk kegiatan" title="Spanduk kegiatan">
+            </map>
+
+            <br><br>
+            <h2>Keterangan Area</h2>
+            <!-- Tabel Keterangan yang menjadi sasaran dari peta gambar -->
+            <table border="1" bordercolor="#514020" width="100%" cellpadding="5" cellspacing="0">
+                <tr bgcolor="#514020">
+                    <td align="center"><font color="white"><b>Objek</b></font></td>
+                    <td align="center"><font color="white"><b>Bentuk</b></font></td>
+                    <td align="center"><font color="white"><b>Koordinat</b></font></td>
+                    <td align="center"><font color="white"><b>Alasan Pemilihan</b></font></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td><a name="ket_rect"></a><b>Layar proyektor</b></td>
+                    <td align="center">rect</td>
+                    <td align="center">60,60,340,120</td>
+                    <td>Objek berbentuk persegi panjang sempurna, sehingga cukup diwakili oleh koordinat sudut kiri atas dan sudut kanan bawah.</td>
+                </tr>
+                <tr bgcolor="#F5F5DC">
+                    <td><a name="ket_circle"></a><b>Wajah praktikan</b></td>
+                    <td align="center">circle</td>
+                    <td align="center">480,180,55</td>
+                    <td>Wajah mendekati bentuk lingkaran. Titik 480,180 saya ambil dari pusat wajah, lalu jari-jari 55 piksel diukur sampai tepi pipi.</td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td><a name="ket_poly"></a><b>Spanduk kegiatan</b></td>
+                    <td align="center">poly</td>
+                    <td align="center">120,300,300,280<br>420,300,400,400<br>140,410,100,360</td>
+                    <td>Spanduk terpasang miring sehingga sisinya tidak sejajar. Saya menandai enam titik sudut searah jarum jam agar area mengikuti bentuk aslinya.</td>
+                </tr>
+            </table>
+
+            <br><br>
+            <h2>Bukti Pengukuran Koordinat</h2>
+            <p>Koordinat di atas diukur menggunakan penunjuk posisi piksel pada aplikasi pengolah gambar. Berikut tangkapan layar proses pengukurannya.</p>
+            <center>
+                <!-- Menampilkan bukti koordinat dari folder gambar -->
+                <img src="gambar/bukti_koordinat.png" width="600" alt="Bukti Pengukuran Koordinat" border="1">
+            </center>
+            
+            <br>
+            <p align="right">
+                <a href="#atas"><b>&uarr; Kembali ke atas halaman</b></a>
+            </p>
+        </font>
+    </body>
+</html>

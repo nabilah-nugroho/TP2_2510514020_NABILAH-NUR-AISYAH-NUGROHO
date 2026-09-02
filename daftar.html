@@ -1,87 +1,167 @@
-<h1>Formulir Pendaftaran Asisten</h1>
-<hr>    
-<form>
-    <fieldset>
-        <legend> <b> A. Data Diri </b></legend>
-        <table border="0">
-            <tr width = 40%>
-                <td align = "right" >Nama Lengkap</td>
-                <td><input type:"text" name="nama" placeholder="hai"></td>
-            </tr>
-            <tr>
-                <td align = "right">NIM</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-            <tr>
-                <td align = "right">Surel Aktif</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-            <tr>
-                <td align = "right">Nomor Telepon</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-            <tr>
-                <td align = "right">Tanggal Lahir</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-            <tr>
-                <td align = "right">Kata Sandi LeAds</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-            <tr>
-                <td align = "right">Jenis Kelamin</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-            <tr>
-                <td align = "right">IPK Terakhir</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-            <tr>
-                <td align = "right">Jenis Kelamin</td>
-                <td><input type:"text" name="nama"</td>
-            </tr>
-        </table>
-    </fieldset>
-    <fieldset>
-        <table border="0">
-            <legend><b>B. Kesiapan Akademik</b></legend>
-            <tr>
-                <td align = "right">Mata Kuliah yang paling dikuasai</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-            <tr>
-                <td align = "right">Hari ketersediaan jaga lab</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-            <tr>
-                <td align = "right">Keterampilan yang dikuasai</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-            <tr>
-                <td align = "right">Semester berjalan</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-        </table>
-    </fieldset>
-    <fieldset>
-        <table border="0">
-            <legend><b>B. Kesiapan Akademik</b></legend>
-            <tr>
-                <td align = "right">Mata Kuliah yang paling dikuasai</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-            <tr>
-                <td align = "right">Hari ketersediaan jaga lab</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-            <tr>
-                <td align = "right">Keterampilan yang dikuasai</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-            <tr>
-                <td align = "right">Semester berjalan</td>
-                <td><input type: "text" name ="nama"></td>
-            </tr>
-        </table>
-    </fieldset>
-</form>
+<!--
+ Nama : Nabilah Nur Aisyah Nugroho
+ NIM : 2510514020
+ Kelas : A
+ Berkas : daftar.html
+ WARNA_UTAMA = #514020
+ TEBAL_BORDER = 1
+ N_PRESTASI = 5
+ Tanggal ketik : 30/08/2026
+-->
+
+<html>
+    <head>
+        <title>Formulir Pendaftaran Asisten - Nabilah</title>
+    </head>
+    <body bgcolor="#FAF7F0">
+        <font face="Montserrat, sans-serif">
+            <h1>Formulir Pendaftaran Asisten</h1>
+            <hr width="100%" size="2" color="#514020" noshade>
+            
+            <!-- Form dengan method POST, action mailto, dan enctype text/plain -->
+            <form method="post" action="mailto:panji.muslim@upnvj.ac.id?subject=Pendaftaran%20Asisten%20Praktikum%20-%202510514020" enctype="text/plain">
+                
+                <!-- Input hidden berisi NIM -->
+                <input type="hidden" name="NIM" value="2510514020">
+
+                <!-- Fieldset 1: Data Diri -->
+                <fieldset>
+                    <legend><b> A. Data Diri </b></legend>
+                    <table border="0" cellpadding="5" width="100%">
+                        <tr>
+                            <td align="right" width="30%"><label for="nama">Nama Lengkap</label></td>
+                            <!-- Input readonly berisi Nama -->
+                            <td><input type="text" id="nama" name="Nama_Lengkap" value="Nabilah Nur Aisyah Nugroho" readonly tabindex="1"> <small><i>(otomatis)</i></small></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="email">Surel Aktif</label></td>
+                            <!-- Input email dengan accesskey -->
+                            <td><input type="email" id="email" name="Email" placeholder="contoh@mahasiswa.upnvj.ac.id" tabindex="2" accesskey="e"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="telp">Nomor Telepon</label></td>
+                            <!-- Input tel dengan pattern -->
+                            <td><input type="tel" id="telp" name="Telepon" pattern="[0-9]{10,13}" placeholder="08..." tabindex="3"> <small>diawali 08, isi 10-13 digit</small></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="tgl_lahir">Tanggal Lahir</label></td>
+                            <!-- Input date -->
+                            <td><input type="date" id="tgl_lahir" name="Tanggal_Lahir" tabindex="4"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="sandi">Kata Sandi LeAds</label></td>
+                            <!-- Input password -->
+                            <td><input type="password" id="sandi" name="Kata_Sandi" tabindex="5"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>Jenis Kelamin</label></td>
+                            <!-- 3 pilihan radio -->
+                            <td>
+                                <input type="radio" id="jk_p" name="Jenis_Kelamin" value="Perempuan" tabindex="6"> <label for="jk_p">Perempuan</label> 
+                                <input type="radio" id="jk_l" name="Jenis_Kelamin" value="Laki-laki" tabindex="7"> <label for="jk_l">Laki-laki</label> 
+                                <input type="radio" id="jk_t" name="Jenis_Kelamin" value="Tidak diisi" tabindex="8" checked> <label for="jk_t">Tidak diisi</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="ipk">IPK Terakhir</label></td>
+                            <!-- Input number dengan min dan max -->
+                            <td><input type="number" id="ipk" name="IPK" min="3.00" max="4.00" step="0.01" tabindex="9"> <small>rentang 3.00 sampai 4.00</small></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br>
+
+                <!-- Fieldset 2: Kesiapan Akademik -->
+                <fieldset>
+                    <legend><b> B. Kesiapan Akademik </b></legend>
+                    <table border="0" cellpadding="5" width="100%">
+                        <tr>
+                            <td align="right" width="30%"><label for="matkul">Mata Kuliah yang Paling Dikuasai</label></td>
+                            <td>
+                                <!-- Select dengan optgroup diambil dari KRS berjalan -->
+                                <select id="matkul" name="Mata_Kuliah_Dikuasai" tabindex="10" accesskey="m">
+                                    <optgroup label="Sains Data & Programming">
+                                        <option value="Pemrograman Web">Pemrograman Web</option>
+                                        <option value="Basis Data Lanjut">Basis Data Lanjut</option>
+                                        <option value="Pembelajaran Mesin">Pembelajaran Mesin</option>
+                                        <option value="Data Mining">Data Mining</option>
+                                    </optgroup>
+                                    <optgroup label="Teori & Analisis">
+                                        <option value="Rekayasa Data">Rekayasa Data</option>
+                                        <option value="Analisis Big Data">Analisis Big Data</option>
+                                        <option value="IMK">Interaksi Manusia dan Komputer</option>
+                                    </optgroup>
+                                </select>
+                                <br><small><i>Pilihan diambil dari KRS semester ini</i></small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top"><label for="hari_jaga">Hari Kesediaan Jaga Lab</label></td>
+                            <td>
+                                <!-- Select multiple dengan size -->
+                                <select id="hari_jaga" name="Hari_Jaga" multiple size="4" tabindex="11">
+                                    <option value="Senin">Senin</option>
+                                    <option value="Selasa">Selasa</option>
+                                    <option value="Rabu">Rabu</option>
+                                    <option value="Kamis">Kamis</option>
+                                    <option value="Jumat">Jumat</option>
+                                </select>
+                                <br><small><i>Tahan tombol Ctrl untuk memilih lebih dari satu hari</i></small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top"><label>Keterampilan yang Dikuasai</label></td>
+                            <td>
+                                <!-- 4 pilihan checkbox -->
+                                <input type="checkbox" id="skill_1" name="Keterampilan" value="HTML CSS" tabindex="12" checked> <label for="skill_1">HTML dan CSS</label><br>
+                                <input type="checkbox" id="skill_2" name="Keterampilan" value="SQL" tabindex="13"> <label for="skill_2">SQL dan perancangan basis data</label><br>
+                                <input type="checkbox" id="skill_3" name="Keterampilan" value="Python" tabindex="14" checked> <label for="skill_3">Python untuk analisis data</label><br>
+                                <input type="checkbox" id="skill_4" name="Keterampilan" value="Public Speaking" tabindex="15"> <label for="skill_4">Public speaking dan mengajar</label>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br>
+
+                <!-- Fieldset 3: Berkas dan Pernyataan -->
+                <fieldset>
+                    <legend><b> C. Berkas dan Pernyataan </b></legend>
+                    <table border="0" cellpadding="5" width="100%">
+                        <tr>
+                            <td align="right" width="30%"><label for="berkas">Unggah Transkrip</label></td>
+                            <!-- Input file dengan accept -->
+                            <td>
+                                <input type="file" id="berkas" name="Berkas_Transkrip" accept=".pdf,.doc,.docx" tabindex="16">
+                                <br><small>Format PDF, DOC, atau DOCX</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top"><label for="alasan">Alasan Mendaftar</label></td>
+                            <!-- Textarea dengan rows dan cols -->
+                            <td>
+                                <textarea id="alasan" name="Alasan" rows="4" cols="45" tabindex="17" placeholder="Tuliskan alasan Anda di sini..."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top"><label for="setuju">Pernyataan</label></td>
+                            <td>
+                                <input type="checkbox" id="setuju" name="Persetujuan" value="Ya, setuju" required tabindex="18">
+                                <label for="setuju">Saya menyatakan seluruh data di atas benar dan dapat dipertanggungjawabkan.</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <br>
+                                <!-- Tombol Submit dan Reset -->
+                                <input type="submit" value="Kirim Pendaftaran" tabindex="19" accesskey="k">
+                                <input type="reset" value="Kosongkan Isian" tabindex="20" accesskey="x">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </form>
+        </font>
+    </body>
+</html>
